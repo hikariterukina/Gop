@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public Text scoreText;
+
+    // スコア
+    private int score;
     bool onu = true;
     bool ond = true;
     bool onr = true;
@@ -17,6 +22,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        scoreText.text = score.ToString();
         if (Input.GetKeyDown(KeyCode.W))
         {
             onu = false;
@@ -46,18 +52,22 @@ public class Player : MonoBehaviour
     {
         if (onu == false && collision.gameObject.tag == "up")
         {
+            score += 500;
             Destroy(collision.gameObject);
         }
         if (ond == false && collision.gameObject.tag == "down")
         {
+            score += 500;
             Destroy(collision.gameObject);
         }
         if (onr == false && collision.gameObject.tag == "right")
         {
+            score += 500;
             Destroy(collision.gameObject);
         }
         if (onl == false && collision.gameObject.tag == "left")
         {
+            score += 500;
             Destroy(collision.gameObject);
         }
     }

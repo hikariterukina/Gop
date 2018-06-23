@@ -12,7 +12,7 @@ public class CubeScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position -=   transform.right * cubespeed * Time.deltaTime;
+        transform.position -= transform.right * cubespeed * Time.deltaTime;
         if(this.transform.position.x <= -10)
         {
             Destroy(gameObject);
