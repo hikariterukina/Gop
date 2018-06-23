@@ -13,13 +13,4 @@ public class Player : MonoBehaviour {
 	void Update () {
 		
 	}
-    void OnTriggerEnter(Collider collision)
-    {
-        print(1);
-        if(Input.GetKeyDown(KeyCode.Space) && collision.gameObject.tag == "CommandCube")
-        {
-            
-            Destroy(collision.gameObject);
-        }
-    }
 }
