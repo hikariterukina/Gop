@@ -46,6 +46,7 @@ public class Player : MonoBehaviour
             onr = true;
             onl = true;
         }
+        
     }
 
     void OnTriggerStay2D(Collider2D collision)
@@ -54,21 +55,31 @@ public class Player : MonoBehaviour
         {
             score += 500;
             Destroy(collision.gameObject);
+            EffectInstance();
+
+
         }
         if (ond == false && collision.gameObject.tag == "down")
         {
             score += 500;
             Destroy(collision.gameObject);
+            EffectInstance();
         }
         if (onr == false && collision.gameObject.tag == "right")
         {
             score += 500;
             Destroy(collision.gameObject);
+            EffectInstance();
         }
         if (onl == false && collision.gameObject.tag == "left")
         {
             score += 500;
             Destroy(collision.gameObject);
+            EffectInstance();
         }
+    }
+    void EffectInstance()
+    {
+
     }
 }
