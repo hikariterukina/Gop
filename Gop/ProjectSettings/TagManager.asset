@@ -6,6 +6,10 @@ TagManager:
   tags:
   - CommandCube
   - cube
+  - up
+  - down
+  - right
+  - left
   layers:
   - Default
   - TransparentFX
