@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114417446246203080}
   m_Layer: 0
   m_Name: right 1
-  m_TagString: Untagged
+  m_TagString: right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16.54, y: 13.91}
+  m_Size: {x: 5, y: 3}
   m_EdgeRadius: 0
 --- !u!114 &114417446246203080
 MonoBehaviour:
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65d2792e20b52d4e8c257fa47898ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubespeed: -7
+  cubespeed: -20
 --- !u!212 &212750912970727108
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -134,7 +134,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 25bc3db8c541b9141b2e6f4a3b1035b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -9,11 +9,9 @@ public class Player : MonoBehaviour
 
     // スコア
     private int score;
-    bool on;
     // Use this for initialization
     void Start()
     {
-        on = false;
     }
 
     // Update is called once per frame
@@ -26,26 +24,25 @@ public class Player : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        on = true;
-        if (Input.GetKey(KeyCode.W) && collision.gameObject.tag == "up" && on == true)
+        if (Input.GetKey(KeyCode.W) && collision.gameObject.tag == "up" )
         {
             score += 500;
             Destroy(collision.gameObject);
             EffectInstance();
         }
-        if (Input.GetKey(KeyCode.S)&& collision.gameObject.tag == "down" && on == true)
+        if (Input.GetKey(KeyCode.S)&& collision.gameObject.tag == "down"  )
         {
             score += 500;
             Destroy(collision.gameObject);
             EffectInstance();
         }
-        if (Input.GetKeyDown(KeyCode.D) && collision.gameObject.tag == "right" && on == true)
+        if (Input.GetKeyDown(KeyCode.D) && collision.gameObject.tag == "right"  )
         {
             score += 500;
             Destroy(collision.gameObject);
             EffectInstance();
         }
-        if (Input.GetKeyDown(KeyCode.A) && collision.gameObject.tag == "left" && on == true)
+        if (Input.GetKeyDown(KeyCode.A) && collision.gameObject.tag == "left")
         {
             score += 500;
             Destroy(collision.gameObject);
