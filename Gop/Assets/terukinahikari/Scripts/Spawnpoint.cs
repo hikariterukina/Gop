@@ -15,7 +15,7 @@ public class Spawnpoint : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         waitcount += 1;
-        if (waitcount % 12 == 0)
+        if (waitcount % 70  == 0)
         {
             Instantiate(CommandCube, transform.position, transform.rotation);
         }
