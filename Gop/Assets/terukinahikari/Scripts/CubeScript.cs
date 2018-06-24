@@ -15,9 +15,9 @@ public class CubeScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector2 pos = transform.position;
-        pos.x += cubespeed * Time.deltaTime;
+        pos.x += cubespeed * 4 * Time.deltaTime;
         transform.position = pos;
-        if(this.transform.position.x <= -10)
+        if(this.transform.position.x <= -900)
         {
             if (Player.score <= 0)
             {
