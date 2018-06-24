@@ -8,9 +8,20 @@ public class GoHard : MonoBehaviour
 {
 
     // Use this for initialization
-    public void OnClick()
+    public void OnHard()
     {
-        SceneManager.LoadScene("HardMode");
+        SceneManager.LoadScene(4);
+    }
+
+    public void OnEasy()
+    {
+        SceneManager.LoadScene(2);
+
+
+    }
+    public void OnNomal()
+    {
+        SceneManager.LoadScene(3);
     }
 
     // Update is called once per frame

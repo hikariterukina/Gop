@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class cokkie : MonoBehaviour {
     public bool rev;
@@ -31,5 +32,10 @@ public class cokkie : MonoBehaviour {
                 transform.position = v;
             }
         }
+
 	}
+    public void OnClick()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

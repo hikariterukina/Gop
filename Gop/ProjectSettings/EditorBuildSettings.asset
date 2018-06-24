@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/terukinahikari/Scenes/SampleScene.unity
+    path: Assets/Master/Scene/Title.unity
+    guid: ca11d97b8099f454fa8be02035ac004d
+  - enabled: 1
+    path: Assets/Master/Scene/Select.unity
+    guid: c01e16151dca1e44aaeb7df24fe021aa
+  - enabled: 1
+    path: Assets/Master/Scene/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/terukinahikari/Scenes/Result.unity
+    path: Assets/Master/Scene/Main 1.unity
+    guid: c6b3c23e10040c6419966a6a45b18b14
+  - enabled: 1
+    path: Assets/Master/Scene/Main 2.unity
+    guid: cbba1ca1575816e41810027a0524e10a
+  - enabled: 1
+    path: Assets/Master/Scene/Result.unity
     guid: 9c616971a557ddb478ab783ed97f8f2b
   m_configObjects: {}
