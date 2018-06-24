@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     // スコア
     public static int score;
     public static int ResultCount;
+    public GameObject egg;
     // Use this for initialization
     void Start()
     {
