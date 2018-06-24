@@ -6,10 +6,10 @@ public class CubeScript : MonoBehaviour {
 
 
    
-    public float cubespeed =  1;
+    public static float cubespeed =  -200;
+    
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -17,7 +17,8 @@ public class CubeScript : MonoBehaviour {
         Vector2 pos = transform.position;
         pos.x += cubespeed * 4 * Time.deltaTime;
         transform.position = pos;
-        if(this.transform.position.x <= -900)
+
+        if(this.transform.position.x <= -1000)
         {
             if (Player.score <= 0)
             {

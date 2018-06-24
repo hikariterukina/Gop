@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     // スコア
     public static int score;
     public static int ResultCount;
-    public GameObject egg;
+    public GameObject[] Effects;
+    public AudioSource Good;
     // Use this for initialization
     void Start()
     {
@@ -42,7 +43,7 @@ public class Player : MonoBehaviour
 
             ResultCount += 1;
         }
-        if(score >= 7000)
+        if(score >= 15000)
         {
             SceneManager.LoadScene("Result");
         }
@@ -53,40 +54,42 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) && collision.gameObject.tag == "up" )
         {
-
-                score += 500;
-            
+            score += 500;
+            Good.Play();
             Destroy(collision.gameObject);
-            
             EffectInstance();
         }
         if (Input.GetKey(KeyCode.S)&& collision.gameObject.tag == "down"  )
         {
-           
-                score += 500;
-           
+            score += 500;
+            Good.Play();
             Destroy(collision.gameObject);
-
             EffectInstance();
         }
         if (Input.GetKeyDown(KeyCode.D) && collision.gameObject.tag == "right"  )
         {
-           
-                score += 500;
-            
+            score += 500;
+            Good.Play();
             Destroy(collision.gameObject);
             EffectInstance();
         }
         if (Input.GetKeyDown(KeyCode.A) && collision.gameObject.tag == "left")
         {
-            
-                score += 500;
+            score += 500;
+            Good.Play();
             Destroy(collision.gameObject);
             EffectInstance();
         }
     }
     void EffectInstance()
     {
-
+        int RandomR = Random.Range(0, 3);
+         GameObject i=  Instantiate(Effects[RandomR], transform.position, Quaternion.identity);
+        StartCoroutine(EffectDestroy(i));
+    }
+    IEnumerator EffectDestroy(GameObject efd)
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(efd.gameObject);
     }
 }
