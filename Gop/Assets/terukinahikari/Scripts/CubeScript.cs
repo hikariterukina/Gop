@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CubeScript : MonoBehaviour {
 
+
+   
     public float cubespeed =  1;
 	// Use this for initialization
 	void Start () {
@@ -17,6 +19,14 @@ public class CubeScript : MonoBehaviour {
         transform.position = pos;
         if(this.transform.position.x <= -10)
         {
+            if (Player.score <= 0)
+            {
+                Player.score = 0;
+            }
+            else
+            {
+                Player.score -= 500;
+            }
             Destroy(gameObject);
         }
         
