@@ -6,31 +6,36 @@ using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour {
 
-    public float mt = 66.00f;
+    public float mt = 60.00f;
     float tc;
+    public GameObject Timetext;
+    public GameObject Finishtext;
+
 
     // Use this for initialization
     void Start()
     {
+        Time.timeScale = 1;
         tc = mt;
     }
         // Update is called once per frame
     void Update()
     {
         tc -= Time.deltaTime;
-        GetComponent<Text>().text = ((float)tc).ToString("F2");
+        Timetext.GetComponent<Text>().text = ((float)tc).ToString("F2");
         if (tc > 60.01)
         {
             GetComponent<Text>().text = "";
 
         }
-        if (tc < 0.01)
+        if (tc < 0.2)
         {
-            GetComponent<Text>().text = "Time's up!";
-        }
-        if (tc < -2)
-        {
-            SceneManager.LoadScene("Result");
+
+            Time.timeScale = 0;
+
+            Finishtext.SetActive(true);
+
+            SceneManager.LoadScene(5);
         }
     }
 }

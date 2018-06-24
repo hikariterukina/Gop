@@ -24,56 +24,52 @@ public class Player : MonoBehaviour
     void Update()
     {
         scoreText.text = score.ToString();
-        if (Input.GetKey(KeyCode.W) )
+        if (Input.GetKey(KeyCode.UpArrow) )
         {
             ResultCount += 1;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
 
             ResultCount += 1;
         }
-        if (Input.GetKeyDown(KeyCode.D) )
+        if (Input.GetKeyDown(KeyCode.RightArrow) )
         {
 
             ResultCount += 1;
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
 
             ResultCount += 1;
-        }
-        if(score >= 15000)
-        {
-            SceneManager.LoadScene("Result");
         }
 
     }
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKey(KeyCode.W) && collision.gameObject.tag == "up" )
+        if (Input.GetKey(KeyCode.UpArrow) && collision.gameObject.tag == "up" )
         {
             score += 500;
             Good.Play();
             Destroy(collision.gameObject);
             EffectInstance();
         }
-        if (Input.GetKey(KeyCode.S)&& collision.gameObject.tag == "down"  )
+        if (Input.GetKey(KeyCode.DownArrow)&& collision.gameObject.tag == "down"  )
         {
             score += 500;
             Good.Play();
             Destroy(collision.gameObject);
             EffectInstance();
         }
-        if (Input.GetKeyDown(KeyCode.D) && collision.gameObject.tag == "right"  )
+        if (Input.GetKeyDown(KeyCode.RightArrow) && collision.gameObject.tag == "right"  )
         {
             score += 500;
             Good.Play();
             Destroy(collision.gameObject);
             EffectInstance();
         }
-        if (Input.GetKeyDown(KeyCode.A) && collision.gameObject.tag == "left")
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && collision.gameObject.tag == "left")
         {
             score += 500;
             Good.Play();
