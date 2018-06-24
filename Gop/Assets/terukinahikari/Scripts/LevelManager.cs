@@ -17,11 +17,11 @@ public class LevelManager : MonoBehaviour {
 	void Update () {
 
         Obscount = Random.Range(1, obs.Length);
-        Obsrd = Random.Range(30, 70);
+        Obsrd = Random.Range(-400, 400);
         ObsTcount += 1;
-        if(ObsTcount == 400)
+        if(ObsTcount == 300)
         {
-            Instantiate(obs[Obscount], transform.position, Quaternion.Euler(Obsrd, 0, 0));
+            Instantiate(obs[Obscount], new Vector3(Obsrd,-300,0), Quaternion.Euler(0, 0, 0));
             ObsTcount = 0;
         }
 
